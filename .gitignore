@@ -1,0 +1,38 @@
+# Node.js
+node_modules/
+
+# Build artifacts
+build/
+dist/
+
+# Dependency directories
+.pnp/
+.pnp.js
+
+# TypeScript
+*.tsbuildinfo
+
+# Visual Studio Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editor-specific files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ESLint
+.eslintcache
+*.eslintcache
+
+# Prettier
+prettier.config.js
+
