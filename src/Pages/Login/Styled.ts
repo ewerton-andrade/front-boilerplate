@@ -8,7 +8,6 @@ const LoginMainContainer = styled.div`
 `
 
 const LoginLeftContainer = styled.div`
-    border: 3px solid red; 
     height: 100%; 
     width: 50%;
     background-color: #f0f2f5;
