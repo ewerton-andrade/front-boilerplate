@@ -11,13 +11,16 @@ const LoginLeftContainer = styled.div`
     border: 3px solid red; 
     height: 100%; 
     width: 50%;
-    background-color: #3464eb;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 const LoginRightContainer = styled.div`
     height: 100%; 
     width: 50%;
-    background-color: #ffffff;
+    background-color: #f0f2f5;
 `
 
 export { LoginMainContainer, LoginLeftContainer, LoginRightContainer }

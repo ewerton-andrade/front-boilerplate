@@ -1,26 +1,24 @@
-import { LoginMainContainer, LoginLeftContainer, LoginRightContainer } from "./Styled"
-import { AppleOutlined }  from "@ant-design/icons"
+import { LoginMainContainer, LoginLeftContainer, LoginRightContainer } from "./Styled";
+import Card from "../../Components/Card";
 
 const Login = () => {
   return (
     <LoginMainContainer>
       <LoginLeftContainer>
-        <div style={{ border: "1px solid red", display: "flex", justifyContent: "space-between" }}>
-          <AppleOutlined />
-          <p>Nosso sistema</p>
-        </div>
-        <div style={{ border: "1px solid red" }}>
-          
-        </div>
-        <div style={{ border: "1px solid red" }}>
-
-        </div>
-      </LoginLeftContainer>
-        <div style={{ border: "3px solid blue", display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "#ffffff", height: "100%", width: "50%"}}>
-          <div style={{border: "3px solid magenta", display: "flex", alignItems: "center", justifyContent: "center", height: "50%", width: "50%"}}>
-              <p>COMPONENTE DE LOGIN</p>
+        <div style={{ display: "flex", alignItems: "center", height: "65%", width: "50%", flexDirection: "column", border: "1px solid blue" }}>
+          {/* 1rem = 16px 0.5rem = 8px */}
+          <p style={{ fontSize: "6rem", fontFamily: "'Poppins', sans-serif", color: "#4287f5", fontWeight: "700", width: "100%", textAlign: "left" }}>facebook</p>
+          <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: "3rem", width: "100%", textAlign: "left", color: "#333" }}>Recent logins</p>
+          <p style={{ fontFamily: "'Poppins', sans-serif", color: "#606770", fontSize: "1rem", textAlign: "left", width: "100%"}}>Click your picture or add an account.</p>
+          <div  >
+            <Card />
           </div>
         </div>
+
+      </LoginLeftContainer>
+        <LoginRightContainer>
+          
+        </LoginRightContainer>
     </LoginMainContainer>
   )
 }
