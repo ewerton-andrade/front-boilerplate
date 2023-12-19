@@ -36,3 +36,4 @@ Desktop.ini
 # Prettier
 prettier.config.js
 
+yarn.lock
