@@ -1,13 +1,26 @@
 import profileImg from "../../../public/Assets/perfil.jpg";
+import { CardContainer, CloseButton, ImgComponent, ProfileNameContainer } from "./Styled";
+import { Badge } from "antd";
+import { useState } from "react";
+import { CloseOutlined } from "@ant-design/icons"
 
 const Card = () => {
+
+  const [number, setNumber] = useState(5);
   return (
-    <div style={{ width: "10rem", height: "12.875rem", backgroundColor: "#fff", borderRadius: "1rem", margin: "0px", padding: "0px", display: "flex", flexDirection: "column", boxShadow: "0px 2px 4px #0000000D", border: "2px solid #777" }}>
-      <img src={profileImg} style={{ width: "100%", borderRadius: "0.85rem 0.85rem 0rem 0rem", margin: "0px", padding: "0px" }}/>
-      <div style={{ width: "100%", height: "2.875rem", display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <p style={{ fontFamily: "'Poppins', sans-serif" }}>Ewerton</p>
-      </div>
-    </div>
+    <a style={{ cursor: "pointer" }} onClick={() => setNumber(0)}>
+      <Badge count={number} offset={[-8, 5]} >
+        <CardContainer>
+          <CloseButton>
+            <CloseOutlined style={{ fontSize: "0.7rem"}}/>
+          </CloseButton>
+          <ImgComponent src={profileImg}/>
+          <ProfileNameContainer>
+            <p>Ewerton</p>
+          </ProfileNameContainer>
+        </CardContainer>
+      </Badge>
+    </a>
   )
 }
 
