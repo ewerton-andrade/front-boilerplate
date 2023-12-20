@@ -1,10 +1,15 @@
-import profileImg from "../../../public/Assets/perfil.jpg";
+import ewerton from "../../../public/Assets/perfil.jpg";
+import diego from "../../../public/Assets/diegoface.jpg"
 import { CardContainer, CloseButton, ImgComponent, ProfileNameContainer } from "./Styled";
 import { Badge } from "antd";
 import { useState } from "react";
 import { CloseOutlined } from "@ant-design/icons"
 
-const Card = () => {
+type Props = {
+  who: string
+}
+
+const Card = (test: Props) => {
 
   const [number, setNumber] = useState(5);
   return (
@@ -14,9 +19,9 @@ const Card = () => {
           <CloseButton>
             <CloseOutlined style={{ fontSize: "0.7rem"}}/>
           </CloseButton>
-          <ImgComponent src={profileImg}/>
+          <ImgComponent src={test.who === "ewerton" ? ewerton : diego}/>
           <ProfileNameContainer>
-            <p>Ewerton</p>
+            <p>{test.who}</p>
           </ProfileNameContainer>
         </CardContainer>
       </Badge>
