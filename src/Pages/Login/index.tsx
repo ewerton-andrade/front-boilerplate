@@ -1,5 +1,6 @@
 import { LoginMainContainer, LoginLeftContainer, LoginRightContainer } from "./Styled";
 import Card from "../../Components/Card";
+import LoginForm from "../../Components/LoginForm";
 
 const Login = () => {
   return (
@@ -17,9 +18,15 @@ const Login = () => {
         </div>
 
       </LoginLeftContainer>
-        <LoginRightContainer>
+      
+      <LoginRightContainer>
+      <div style={{display: "flex", width: "50%", height: "50%", border: "1px solid blue", flexDirection: "column" }}>
+        <LoginForm></LoginForm>
+      </div>
+      </LoginRightContainer>
           
-        </LoginRightContainer>
+          
+        
     </LoginMainContainer>
   )
 }

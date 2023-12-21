@@ -1,5 +1,5 @@
-import ewerton from "../../../public/Assets/perfil.jpg";
-import diego from "../../../public/Assets/diegoface.jpg"
+import ewerton from "/Assets/perfil.jpg";
+import diego from "/Assets/diegoface.jpg"
 import { CardContainer, CloseButton, ImgComponent, ProfileNameContainer } from "./Styled";
 import { Badge } from "antd";
 import { useState } from "react";

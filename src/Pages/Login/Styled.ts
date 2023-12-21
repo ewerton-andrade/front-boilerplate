@@ -19,7 +19,10 @@ const LoginLeftContainer = styled.div`
 const LoginRightContainer = styled.div`
     height: 100%; 
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #f0f2f5;
 `
 
-export { LoginMainContainer, LoginLeftContainer, LoginRightContainer }
+export { LoginMainContainer, LoginLeftContainer,  LoginRightContainer}
