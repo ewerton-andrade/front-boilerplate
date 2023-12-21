@@ -2,8 +2,13 @@ import { LoginMainContainer, LoginLeftContainer, LoginRightContainer } from "./S
 import Card from "../../Components/Card";
 import { Button, Divider, Form, Input } from 'antd'; 
 import ModalCreate from "../../Components/Modal";
+import { useAppDispatch } from "../../Redux/Hooks";
+import { OpenModalActions } from "../../Redux/Features/OpenModal";
 
 const Login = () => {
+
+  const dispatch = useAppDispatch();
+  const { setOpenModal } = OpenModalActions;
 
   const onFinish = (values: any) => {
     console.log('Received values of form: ', values);
@@ -59,7 +64,7 @@ const Login = () => {
             <Button type="link" style={{ width: "100%", fontSize: "1rem" }}>Esqueceu a senha?</Button>
             <Divider />
             <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
-              <Button style={{ height: "3.25rem", padding: "0.84rem 1 rem", fontSize: "1rem", borderRadius: "0.4rem", backgroundColor: "#42b72a", color: "#fff", fontFamily: "'Poppins', sans-serif", fontWeight: "600", marginBottom: "0.5rem"}}>Criar nova conta</Button>
+              <Button onClick={() => dispatch(setOpenModal(true))} style={{ height: "3.25rem", padding: "0.84rem 1 rem", fontSize: "1rem", borderRadius: "0.4rem", backgroundColor: "#42b72a", color: "#fff", fontFamily: "'Poppins', sans-serif", fontWeight: "600", marginBottom: "0.5rem"}}>Criar nova conta</Button>
             </div>
           </div>
         </LoginRightContainer>

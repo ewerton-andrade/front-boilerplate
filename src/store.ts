@@ -7,8 +7,8 @@ export const reducer =  {
 
 export const store = configureStore({
   reducer,
-  middleware: (getDefaultMiddleware) => 
-  getDefaultMiddleware().concat()
+  // middleware: (getDefaultMiddleware) => 
+  // getDefaultMiddleware().concat()
 })
 
 export type AppStore = ReturnType<typeof store.getState>;
