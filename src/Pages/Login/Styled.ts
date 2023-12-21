@@ -23,6 +23,9 @@ const LoginRightContainer = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 export { LoginMainContainer, LoginLeftContainer,  LoginRightContainer}
