@@ -1,7 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { OpenModal, OpenModalReducer } from "./Redux/Features/OpenModal";
 
 export const reducer =  {
-  
+  [OpenModal.name]: OpenModalReducer
 }
 
 export const store = configureStore({
