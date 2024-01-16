@@ -4,15 +4,31 @@ import { Button, Divider, Form, Input } from 'antd';
 import ModalCreate from "../../Components/Modal";
 import { useAppDispatch } from "../../Redux/Hooks";
 import { OpenModalActions } from "../../Redux/Features/OpenModal";
+import { AxiosService } from "../../Redux/Services/axiosService";
+import { useGetRtkServiceQuery } from "../../Redux/Services/rtkService";
+import { useEffect } from "react";
 
 const Login = () => {
 
   const dispatch = useAppDispatch();
   const { setOpenModal } = OpenModalActions;
+  const { status } = useGetRtkServiceQuery();
 
   const onFinish = (values: any) => {
     console.log('Received values of form: ', values);
   };
+
+  useEffect( () => {
+    console.log(status)
+  },[status] )
+
+  const handleAxiosClick = async () => {
+    try {
+      await AxiosService.getAll()
+    } catch {
+      console.log("==>> ERRO!!!")
+    }
+  }
 
   return (
     <LoginMainContainer>
@@ -58,7 +74,7 @@ const Login = () => {
               <Form.Item
                 style={{ margin: "0.5rem" }}
               >
-                <Button style={{ width: "22.75rem", height: "3.25rem", padding: "0.84rem 1 rem", fontSize: "1.25rem", borderRadius: "0.4rem", backgroundColor: "#1877f2", color: "#fff", fontFamily: "'Poppins', sans-serif"}}>Entrar</Button>
+                <Button onClick={handleAxiosClick} style={{ width: "22.75rem", height: "3.25rem", padding: "0.84rem 1 rem", fontSize: "1.25rem", borderRadius: "0.4rem", backgroundColor: "#1877f2", color: "#fff", fontFamily: "'Poppins', sans-serif"}}>Entrar</Button>
               </Form.Item>
             </Form>
             <Button type="link" style={{ width: "100%", fontSize: "1rem" }}>Esqueceu a senha?</Button>
